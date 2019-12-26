@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Palindromos</title>
+	<script type="text/javascript">
+
+		var fraseUsuario = prompt("Introduzca cadena para saber si es palindromo o no");
+
+		if(comprobar(fraseUsuario))
+			alert("La cadena " + fraseUsuario + " es palindromo");
+		else
+			alert("La cadena " + fraseUsuario + " no es palindromo");
+
+		function comprobar(fraseUsuario){
+			fraseUsuario = fraseUsuario.toLowerCase().replace(/\s/g,"");
+			var fraseReverse = fraseUsuario.split("").reverse().toString();
+			for(var i = 0; i < fraseReverse.length; i++){
+				fraseReverse = fraseReverse.replace(",","");
+			}
+			if(fraseUsuario==fraseReverse)
+				return true;
+			else
+				return false;
+		}
+		
+	</script>
+</head>
+<body>
+</body>
+</html>
